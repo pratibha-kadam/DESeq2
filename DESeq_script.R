@@ -38,3 +38,8 @@ plotDispEsts(dds)
 #Check differential expression for specific condition from the data
 res <- results(dds, contrast = c("condition", "T1", "Control"))
 res
+
+
+#Write normalised result to a file
+write.table(res,file= "less_than_16_vs_anyBMI_DEG.txt", sep="\t", row.names = T,col.names = T,quote = F)
+
